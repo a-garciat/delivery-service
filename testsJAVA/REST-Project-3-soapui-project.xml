@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="886fbf3f-6384-4d36-aee1-3c2977b92622" activeEnvironment="Default" name="TestRestIt2" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="8545b2ed-64b3-44e0-b23e-dfd1d753cbd8" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:7070" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:7070</con:endpoint></con:endpoints><con:resource name="Rs-deliveries-service" path="/rs-deliveries-service" id="fadbd59e-1a5b-4f75-9f92-13cc229abd99"><con:settings/><con:parameters/><con:resource name="customers" path="customers" id="e0f3deae-9312-4bbf-951d-c743b05cd638"><con:settings/><con:parameters><con:parameter><con:name>name</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:resource name="2" path="2" id="44053b83-981d-45c8-9b24-4f687eb47da1"><con:settings/><con:parameters/><con:method name="updateClient2" id="1afbe560-95f7-4ece-8a31-2e3ce57cc0cc" method="PUT"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:customer</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ns="http://localhost/rs-deliveries-service/customers/2">ns:Fault</con:element></con:representation><con:request name="updateClient2" id="302a370a-15d7-4dc2-93fe-bdb1b057031a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<customer xmlns="http://es.udc.es/deliveries/xml" customerId="2">
+<name>Concello de A Coruña</name>
+<Cif>J22222222</Cif>
+<address>María Pita nº1</address>
+</customer>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request><con:request name="updateClient2JSON" id="302a370a-15d7-4dc2-93fe-bdb1b057031a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<customer xmlns="http://es.udc.es/deliveries/xml" customerId="2">
+<name>Concello de A Coruña</name>
+<Cif>J22222222</Cif>
+<address>María Pita nº1</address>
+</customer>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/customers/2</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="1" path="1" id="c900a13f-5aad-4bae-b2ed-c3619bfb2a6a"><con:settings/><con:parameters/><con:method name="buscarClientePorId" id="cf6a09b4-8519-4d4e-b83b-96e16a58cc96" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://localhost/rs-deliveries-service/customers/1">ns:Response</con:element></con:representation><con:request name="buscarClientePorId" id="07c7a4e4-2480-4684-adde-87ac244c2f35" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request><con:request name="buscarClientePorIdJSON" id="07c7a4e4-2480-4684-adde-87ac244c2f35" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="9999" path="9999" id="3a3967f9-c05f-4892-8c8f-4a02647843df"><con:settings/><con:parameters/><con:method name="buscarCliente9999" id="b5111778-ef44-4c3b-8130-87ffa4e3359e" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/><con:element xmlns:ns="http://localhost/rs-deliveries-service/customers/9999">ns:Fault</con:element></con:representation><con:request name="buscarCliente9999" id="88f519ef-eb8e-470e-9335-7b2b47916183" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request><con:request name="buscarCliente9999JSON" id="88f519ef-eb8e-470e-9335-7b2b47916183" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/9999</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:method name="findCustomer" id="74b63086-8ee7-4435-8861-d8c266e8757b" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>customerDtoJaxbs</con:element></con:representation><con:request name="findCoruna" id="0dd514a1-b672-456b-8b76-6de6aeb29713" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="type" value="&quot;application/xml&quot;"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Coruña" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request><con:request name="findUniversidade" id="1b3aafa1-ba7c-4474-95a2-b89a5a7988f0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="type" value="&quot;application/xml&quot;"/>
+  <con:entry key="Content-Type" value="application/xml"/>
+</xml-fragment>]]></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Universidade" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request><con:request name="findUniversidadeJSON" id="1b3aafa1-ba7c-4474-95a2-b89a5a7988f0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Universidade" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:request><con:request name="findCorunaJSON" id="0dd514a1-b672-456b-8b76-6de6aeb29713" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Coruña" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="shipments" path="shipments" id="89e7bebc-b891-4add-94ad-bab519e3097d"><con:settings/><con:parameters><con:parameter><con:name>customerId</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>first</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>max</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:resource name="1" path="1" id="0518bbe3-47b8-4d4d-99ba-4a8d82492de6"><con:settings/><con:parameters/><con:method name="findS1" id="e60a71e6-7ea1-4ce6-b90e-318a26a4e989" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:shipment</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:ns="http://localhost/rs-deliveries-service/shipments/1">ns:Response</con:element></con:representation><con:request name="findS1" id="19618477-c261-4a7b-bea8-b113576c5410" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="findS1JSON" id="19618477-c261-4a7b-bea8-b113576c5410" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="cancel" path="2/changeStatus/cancel" id="d5261d07-e888-47ff-82b4-19f8ec264a6f"><con:settings/><con:parameters/><con:method name="cancelS2" id="4ea6f23e-96da-4e0a-9e69-9a2d028a3a07" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>204</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:error</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:can="http://localhost/rs-deliveries-service/shipments/2/changeStatus/cancel">can:Fault</con:element></con:representation><con:request name="cancelS2" id="428a9bc0-a855-49be-9fd4-caef1a075315" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="cancelS2JSON" id="428a9bc0-a855-49be-9fd4-caef1a075315" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/2/changeStatus/cancel</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:method name="Crear" id="80e0fc8c-3d0f-41e1-a073-fb77a5de17b6" method="POST"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/plain</con:mediaType><con:status>400</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:shipment</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:shipment</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ns="http://es.udc.es/deliveries/xml">ns:error</con:element></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:ship="http://localhost/rs-deliveries-service/shipments">ship:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:ship="http://localhost/rs-deliveries-service/shipments">ship:Response</con:element></con:representation><con:request name="CrearEnvio1" id="638aab28-420e-44b4-ae4e-1ac8efe95802" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>1</packageReference>
+<address>Plaza de Pontevedra nº1</address>
+</shipment>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="CrearEnvio2" id="800ba092-77c1-4b9b-b7d8-9310cf891b52" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>2</packageReference>
+<address>Plaza de Pontevedra nº2</address>
+</shipment>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="CrearEnvio3" id="9b084af1-caab-4f6b-809b-8fcd08f2ede1" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>3</packageReference>
+<address>Plaza de Pontevedra nº3</address>
+</shipment>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="CrearEnvio1JSON" id="638aab28-420e-44b4-ae4e-1ac8efe95802" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 1,
+   "address": "Plaza de Pontevedra nº1",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="CrearEnvio2JSON" id="800ba092-77c1-4b9b-b7d8-9310cf891b52" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 2,
+   "address": "Plaza de Pontevedra nº2",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request><con:request name="CrearEnvio3JSON" id="9b084af1-caab-4f6b-809b-8fcd08f2ede1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 3,
+   "address": "Plaza de Pontevedra nº3",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request></con:method><con:method name="Cojer" id="6c4fd682-6006-422b-a063-c2e1930bdf43" method="GET"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element>shipmentDtoJaxbs</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element>Response</con:element></con:representation><con:request name="Request 1" id="18e37b7a-69b8-48c9-9e74-a6e1f978df50" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value="10"/>
+  <con:entry key="customerId" value="1"/>
+  <con:entry key="first" value="1"/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:resource></con:interface><con:testSuite id="eb100575-c89b-4014-83c0-785a3a6af28c" name="TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4c27483c-e9c6-4421-95df-6a18a823fccd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CrearEnvio" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="2d8a95d9-82ad-42eb-ba61-443557102acf"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="638aab28-420e-44b4-ae4e-1ac8efe95802" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>1</packageReference>
+<address>Plaza de Pontevedra nº1</address>
+</shipment>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="589d1247-4347-4805-a0cc-0d2c396cc748"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="800ba092-77c1-4b9b-b7d8-9310cf891b52" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>2</packageReference>
+<address>Plaza de Pontevedra nº2</address>
+</shipment>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step3" id="e0fdabfe-b9e7-466c-9419-4c9e69b19f5e"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step3" id="9b084af1-caab-4f6b-809b-8fcd08f2ede1" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<shipment xmlns="http://es.udc.es/deliveries/xml">
+<customerId>1</customerId>
+<packageReference>3</packageReference>
+<address>Plaza de Pontevedra nº3</address>
+</shipment>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="aa8de681-5692-48c6-92d7-997f3a38a65c" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ActualizarCliente" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="b5422172-7d7c-457e-8327-986ee68e37aa"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/2" methodName="updateClient2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="302a370a-15d7-4dc2-93fe-bdb1b057031a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<customer xmlns="http://es.udc.es/deliveries/xml" customerId="2">
+<name>Concello de A Coruña</name>
+<Cif>J22222222</Cif>
+<address>María Pita nº1</address>
+</customer>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/customers/2</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6b07dd4e-936a-4869-9e20-d2dfd38aa664" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarClientePorId" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="0a466a6a-3669-4ff0-bc98-4fb6c1f81b6d"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/1" methodName="buscarClientePorId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="07c7a4e4-2480-4684-adde-87ac244c2f35" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="14ce59cd-27fb-4fa1-8fc1-0c37eaec0da8"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/9999" methodName="buscarCliente9999" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="88f519ef-eb8e-470e-9335-7b2b47916183" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/9999</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b036518b-d44e-44b1-9765-56d8d08d1c2d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CancelarEnvio" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="7dff30b2-8d52-4072-ab97-f4493cd89f34"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments/2/changeStatus/cancel" methodName="cancelS2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="428a9bc0-a855-49be-9fd4-caef1a075315" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/2/changeStatus/cancel</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1fed99e5-d1e4-404e-aac1-02eafdbbda0f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarEnvioPorId" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="ddf1cccd-08e5-4276-b333-4502260c2be6"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments/1" methodName="findS1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="19618477-c261-4a7b-bea8-b113576c5410" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="3b33ea1e-83e0-450b-9e86-e9f0e1236254" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarClientePorNombre" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="2164fcbf-711e-4124-bcd3-7299db75ff63"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers" methodName="findCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="0dd514a1-b672-456b-8b76-6de6aeb29713" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Coruña" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="c7b9452e-8576-4205-afce-b669e2dfa25d"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers" methodName="findCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="1b3aafa1-ba7c-4474-95a2-b89a5a7988f0" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Universidade" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="59390592-a452-47ea-a0a4-ca2b8f6566cb" name="TestSuiteJSON"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="8df79d38-65c3-47b3-bf8a-a9f286bb6700" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CrearEnvio" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="42564664-e983-48e4-b562-8f62617fce65"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="638aab28-420e-44b4-ae4e-1ac8efe95802" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 1,
+   "address": "Plaza de Pontevedra nº1",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="ee717494-abe5-4ed2-b046-737edd276222"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="800ba092-77c1-4b9b-b7d8-9310cf891b52" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 2,
+   "address": "Plaza de Pontevedra nº2",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step3" id="b9d1eecf-2a4a-4a81-89d0-d4ed93c758ff"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments" methodName="Crear" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step3" id="9b084af1-caab-4f6b-809b-8fcd08f2ede1" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request>{
+   "shipmentId": 1,
+   "customerId": 1,
+   "packageReference": 3,
+   "address": "Plaza de Pontevedra nº3",
+   "status": "PENDING",
+   "creationDate": "2021-01-07T22:14:43.714348",
+   "deliveryDate": null,
+   "remainingHours": 23,
+   "link":       [
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/shipments/1",
+         "rel": "self",
+         "type": "application/json",
+         "title": "Self link"
+      },
+               {
+         "href": "http://localhost:7070/rs-deliveries-service/customers/1",
+         "rel": "related",
+         "type": "application/json",
+         "title": "Associated customer link"
+      }
+   ],
+   "action":       {
+      "metadata": "#RsDeliveriesService.CancelShipment",
+      "target": "http://localhost:7070/rs-deliveries-service/shipments/1/changeStatus/cancel",
+      "title": "Cancel"
+   }
+}</con:request><con:originalUri>http://localhost/rs-deliveries-service/shipments</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6199442d-bb2d-42a4-a612-c717337cf5bd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ActualizarCliente" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="3c8d5142-43de-4dea-a1e6-755049717d9e"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/2" methodName="updateClient2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="302a370a-15d7-4dc2-93fe-bdb1b057031a" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request><![CDATA[<customer xmlns="http://es.udc.es/deliveries/xml" customerId="2">
+<name>Concello de A Coruña</name>
+<Cif>J22222222</Cif>
+<address>María Pita nº1</address>
+</customer>]]></con:request><con:originalUri>http://localhost/rs-deliveries-service/customers/2</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="7fb8f754-2ca9-424f-85e4-d83f7ac8ba17" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarClientePorId" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="d68b6372-4101-412f-a42a-3e6c93be1022"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/9999" methodName="buscarCliente9999" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="88f519ef-eb8e-470e-9335-7b2b47916183" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/9999</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="ec7b9236-e8b0-473b-9711-efa6e4aacf74"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers/1" methodName="buscarClientePorId" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="07c7a4e4-2480-4684-adde-87ac244c2f35" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2d7a531d-6eac-4774-8be5-fe26d69905f8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CancelarEnvio" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="2b623fe0-15e5-489c-a296-09576abc842f"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments/2/changeStatus/cancel" methodName="cancelS2" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="428a9bc0-a855-49be-9fd4-caef1a075315" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/2/changeStatus/cancel</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1e440d47-2ee4-4013-a3fb-65c52dd47097" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarEnvioPorId" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="1d14a752-f88d-4a0f-b430-a75a564fa60a"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/shipments/1" methodName="findS1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="19618477-c261-4a7b-bea8-b113576c5410" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/shipments/1</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="max" value=""/>
+  <con:entry key="customerId" value=""/>
+  <con:entry key="first" value=""/>
+</con:parameters><con:parameterOrder><con:entry>customerId</con:entry><con:entry>first</con:entry><con:entry>max</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2abfb57f-681e-47d5-98c3-c549ca75d597" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BuscarClientePorNombre" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Step1" id="9d17bb69-60ab-4a3a-9062-ecd94e79859c"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers" methodName="findCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step1" id="0dd514a1-b672-456b-8b76-6de6aeb29713" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Coruña" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>name</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Step2" id="0580cade-4b50-4460-bd77-03e8c479ab2c"><con:settings/><con:config service="http://localhost:7070" resourcePath="/rs-deliveries-service/customers" methodName="findCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Step2" id="1b3aafa1-ba7c-4474-95a2-b89a5a7988f0" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Accept" value="application/json" xmlns="http://eviware.com/soapui/config"/></con:setting></con:settings><con:endpoint>http://localhost:7070</con:endpoint><con:request/><con:originalUri>http://localhost/rs-deliveries-service/customers</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="name" value="Universidade" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

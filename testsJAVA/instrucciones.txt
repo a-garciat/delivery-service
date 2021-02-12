@@ -1,0 +1,45 @@
+##### 1.- Añadir dos clientes:
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-addCustomer 'Universidade da Coruña' J12345678 'Elviña s/n'"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-addCustomer 'Ayuntamiento de A Coruña' J11111111 'María Pita s/n'"
+
+##### 2.- Actualizar cliente [SoapUI]
+
+##### 3.- Buscar cliente por id [SoapUI]
+
+##### 4.- Buscar cliente por palabras clave [SoapUI]
+
+##### 5.- Crear envio [SoapUI]
+
+##### 6.- Cambiar estado
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-updateStatus 1 REJECTED"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-updateStatus 1 SENT"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-updateStatus 1 DELIVERED"
+
+##### 7.- Cancelar envio [SoapUI]
+
+##### 8.- Buscar envio [SoapUI]
+
+##### 9.- Buscar envíos
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-searchShipments 1 PENDING 1 1"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-searchShipments 1 ANY 1 10"
+
+##### 9,5.- Buscar envíos hipermedia
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-searchAllShipments 1 PENDING 1"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-searchAllShipments 1 ANY 1"
+
+##### 10.- Eliminar cliente
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-removeCustomer -1"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-removeCustomer 1"
+
+mvn exec:java -Dexec.mainClass="es.udc.rs.deliveries.client.ui.DeliveryServiceClient" -Dexec.args="-removeCustomer 2"

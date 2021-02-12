@@ -1,0 +1,38 @@
+<jxb:bindings version="1.0" 
+    xmlns:jxb="http://java.sun.com/xml/ns/jaxb" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <jxb:bindings schemaLocation="../../../../rs-deliveries-service/target/generated-resources/schemagen/schema3.xsd">
+        <jxb:bindings node="//xs:complexType[@name='customerType']">
+            <jxb:class name="CustomerDtoJaxb"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='shipmentType']">    
+            <jxb:class name="ShipmentDtoJaxb"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='inputValidationExceptionType']">    
+            <jxb:class name="InputValidationExceptionDtoJaxb"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='instanceNotFoundExceptionType']">    
+            <jxb:class name="InstanceNotFoundExceptionDtoJaxb"/>
+        </jxb:bindings> 
+        <jxb:bindings node="//xs:complexType[@name='invalidShipmentCancelationException']">    
+            <jxb:class name="InvalidShipmentCancelationExceptionDtoJaxb"/>
+        </jxb:bindings> 
+		<jxb:bindings node="//xs:complexType[@name='invalidStatusChangeException']">    
+            <jxb:class name="InvalidStatusChangeExceptionDtoJaxb"/>
+        </jxb:bindings> 
+        <jxb:bindings node="//xs:complexType[@name='hasShipmentExceptionType']">    
+            <jxb:class name="HasShipmentExceptionDtoJaxb"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='errorType']">
+            <jxb:class name="ExceptionDtoJaxb"/>
+        </jxb:bindings>
+        <jxb:bindings node="//xs:complexType[@name='errorParamType']">
+            <jxb:class name="ExceptionParamDtoJaxb"/>
+        </jxb:bindings>
+
+
+        <!--hasta aqui bien-->
+    </jxb:bindings>
+    
+</jxb:bindings> 

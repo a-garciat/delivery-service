@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>es.udc.rs.deliveries</groupId>
+		<artifactId>rs-deliveries</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<artifactId>rs-deliveries-client</artifactId>
+	<packaging>jar</packaging>
+	<name>RS-Deliveries Client Subsystem</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>es.udc.ws</groupId>
+			<artifactId>ws-util</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.core</groupId>
+			<artifactId>jersey-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-jaxb</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.inject</groupId>
+			<artifactId>jersey-hk2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-json-jackson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>${jaxb2MavenPlugin}</version>
+				<executions>
+					<execution>
+						<id>xjc_deliveries</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>../rs-deliveries-service/target/generated-resources/schemagen/schema3.xsd</source>
+							</sources>
+							<xjbSources>
+								<xjbSource>src/main/resources/deliveriesBindings.xjb</xjbSource>
+							</xjbSources>
+							<outputDirectory>src/main/java</outputDirectory>
+							<clearOutputDir>false</clearOutputDir>
+							<packageName>es.udc.rs.deliveries.client.service.rest.dto</packageName>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>com.sun.activation</groupId>
+						<artifactId>jakarta.activation</artifactId>
+						<version>${jakartaActivation.version}</version>
+					</dependency>
+				</dependencies>								
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

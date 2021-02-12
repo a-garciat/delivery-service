@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>es.udc.rs.deliveries</groupId>
+        <artifactId>rs-deliveries</artifactId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>rs-deliveries-service</artifactId>
+    <packaging>war</packaging>
+    <name>RS-Deliveries Service Subsystem</name>
+	
+    <dependencies>
+        <dependency>
+            <groupId>es.udc.rs.deliveries</groupId>
+            <artifactId>rs-deliveries-model</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-jaxrs2</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-jaxrs2-servlet-initializer-v2</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+    </dependencies>
+    
+    <build>
+    	<finalName>ws-deliveries-service</finalName>
+        <plugins>
+           <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxb2-maven-plugin</artifactId>
+                <version>${jaxb2MavenPlugin}</version>
+                <executions>
+                    <execution>
+                        <id>schemagen</id>
+                        <goals>
+                            <goal>schemagen</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+					<sources>
+						<source>src/main/java/es/udc/rs/deliveries/jaxrs/dto</source>
+					</sources>
+                </configuration>
+                <dependencies>
+                   <dependency>
+                       <groupId>com.sun.activation</groupId>
+                       <artifactId>jakarta.activation</artifactId>
+                       <version>${jakartaActivation.version}</version>
+                   </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+</project>

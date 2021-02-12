@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxb:bindings version="2.1" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2021.01.07 a las 08:19:50 PM CET 
+
+  -->
+  <jaxb:bindings scd="x-schema::tns" xmlns:tns="http://es.udc.es/deliveries/xml">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:customerType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.CustomerDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:hasShipmentExceptionType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.HasShipmentExceptionDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:inputValidationExceptionType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.InputValidationExceptionDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:instanceNotFoundExceptionType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.InstanceNotFoundExceptionDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:invalidShipmentCancelationException">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.InvalidShipmentCancelationExceptionDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:invalidStatusChangeException">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.InvalidStatusChangeExceptionDtoJaxb"/>
+    </jaxb:bindings>
+    <jaxb:bindings scd="~tns:shipmentType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.ShipmentDtoJaxb"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings scd="x-schema::tns" xmlns:tns="http://www.w3.org/2005/Atom">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:atomLinkType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.AtomLinkType"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings scd="x-schema::tns" xmlns:tns="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~tns:atomActionType">
+      <jaxb:class ref="es.udc.rs.deliveries.client.service.rest.dto.AtomActionType"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+  <jaxb:bindings scd="x-schema::">
+    <jaxb:schemaBindings map="false">
+      <jaxb:package name="es.udc.rs.deliveries.client.service.rest.dto"/>
+    </jaxb:schemaBindings>
+    <jaxb:bindings scd="~shipmentStatus">
+      <jaxb:typesafeEnumClass ref="es.udc.rs.deliveries.client.service.rest.dto.ShipmentStatus"/>
+    </jaxb:bindings>
+  </jaxb:bindings>
+</jaxb:bindings>
+
